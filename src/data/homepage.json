@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "title": "正台國際",
+    "subtitle": "46年貼紙設計製造領導者",
+    "description": "正台國際有限公司提供授權IP商品與開發、客製化貼紙與軟包裝服務，從設計、打樣到生產，提供一站式解決方案，協助品牌快速上市，創造最大價值。",
+    "backgroundImage": "/images/hero-1.jpg",
+    "cta": {
+      "primary": {
+        "text": "詢問報價",
+        "href": "/quote"
+      },
+      "secondary": {
+        "text": "探索產品",
+        "href": "#products"
+      }
+    }
+  },
+  "capabilities": [
+    {
+      "icon": "certificate",
+      "title": "SGS認證",
+      "description": "符合國際認證標準，保證產品品質"
+    },
+    {
+      "icon": "leaf",
+      "title": "環保標準",
+      "description": "符合REACH環保標準，永續製造"
+    },
+    {
+      "icon": "customize",
+      "title": "客製化方案",
+      "description": "彈性設計製造，滿足各種客戶需求"
+    },
+    {
+      "icon": "truck",
+      "title": "快速交付",
+      "description": "高效生產流程，快速交付給客戶"
+    },
+    {
+      "icon": "expertise",
+      "title": "設計專業",
+      "description": "資深設計團隊，創意與品質並重"
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "迪士尼授權產品",
+      "description": "多年合作迪士尼授權角色貼紙，品質卓越",
+      "image": "/images/product-1.jpg"
+    },
+    {
+      "title": "辛普森家族系列",
+      "description": "推出多款辛普森家族經典角色貼紙",
+      "image": "/images/product-2.jpg"
+    },
+    {
+      "title": "零售品牌合作",
+      "description": "與多家國際零售品牌合作，提供客製貼紙解決方案",
+      "image": "/images/product-3.jpg"
+    }
+  ],
+  "navigation": [
+    {
+      "label": "產品",
+      "href": "/#products",
+      "children": [
+        { "label": "IP授權商品", "href": "/products/ip-licensing" },
+        { "label": "貼紙製造", "href": "/products/sticker" },
+        { "label": "客製化包裝", "href": "/products/packaging" }
+      ]
+    },
+    {
+      "label": "關於我們",
+      "href": "/#capabilities"
+    },
+    {
+      "label": "聯絡我們",
+      "href": "/contact"
+    }
+  ],
+  "companyInfo": {
+    "name": "正台國際有限公司",
+    "name_en": "Jeng Tair International Limited",
+    "founded": 1980,
+    "description": "46年貼紙設計製造領導者，擁有三麗鷗、蠟筆小新等授權",
+    "location": "台灣",
+    "website": "http://www.smilekid.com",
+    "email": "jing_li02@smilekid.com"
+  }
+}

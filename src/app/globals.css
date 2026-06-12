@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFDEB;
+  --foreground: #1A1A1A;
+  --blue: #7DAACB;
+  --blue-dark: #5B8EAF;
+  --sand: #E8DBB3;
+  --cream: #FFFDEB;
+  --red: #CE2626;
+  --red-dark: #A81E1E;
+  --g900: #1A1A1A;
+  --g700: #3D3D3D;
+  --g500: #737373;
+  --g200: #E8DBB3;
+  --g100: #FFFDEB;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-latin), var(--font-body), 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), var(--font-body), 'PingFang TC', sans-serif;
+}
