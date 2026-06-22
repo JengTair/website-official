@@ -22,12 +22,24 @@ const C = '#4A7CB5'; // stroke color
 
 const BagIcon2Seal = () => (
   <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+    <defs>
+      <radialGradient id="bagGlow" cx="0.5" cy="0.46" r="0.6">
+        <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.95" />
+        <stop offset="45%" stopColor="#F7FBFF" stopOpacity="0.9" />
+        <stop offset="100%" stopColor="#DCEAF8" stopOpacity="0.35" />
+      </radialGradient>
+    </defs>
     {/* outer body */}
-    <rect x="6" y="9" width="40" height="34" rx="2" stroke={C} strokeWidth="1.8" fill="none"/>
+    <rect x="10" y="8" width="32" height="36" rx="2" stroke={C} strokeWidth="1.7" fill="url(#bagGlow)"/>
     {/* top seal band */}
-    <rect x="6" y="9" width="40" height="6" rx="2" stroke={C} strokeWidth="1.4" fill={C} fillOpacity="0.12"/>
+    <rect x="10" y="8" width="32" height="5" rx="1.5" stroke={C} strokeWidth="1.2" fill={C} fillOpacity="0.18"/>
+    <line x1="10" y1="14" x2="42" y2="14" stroke={C} strokeWidth="1.1" strokeDasharray="2 1.5" opacity="0.9"/>
     {/* bottom seal band */}
-    <rect x="6" y="37" width="40" height="6" rx="2" stroke={C} strokeWidth="1.4" fill={C} fillOpacity="0.12"/>
+    <rect x="10" y="39" width="32" height="5" rx="1.5" stroke={C} strokeWidth="1.2" fill={C} fillOpacity="0.18"/>
+    <line x1="10" y1="38" x2="42" y2="38" stroke={C} strokeWidth="1.1" strokeDasharray="2 1.5" opacity="0.9"/>
+    {/* center glow */}
+    <circle cx="26" cy="26" r="10" fill="#FFFFFF" fillOpacity="0.42"/>
+    <circle cx="26" cy="26" r="4.8" fill="#FFFFFF" fillOpacity="0.24"/>
   </svg>
 );
 
