@@ -384,10 +384,10 @@ export default function Hero({ description, cta }: HeroProps) {
                   <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', color: BLUE, border: `1px solid ${BLUE}`, borderRadius: 2, padding: '3px 8px', textTransform: 'uppercase', opacity: 0.8 }}>Sticker Manufacturing</span>
                 </div>
                 <h3 style={{ fontSize: 20, fontWeight: 700, color: G900, marginBottom: 4 }}>貼紙製造</h3>
-                <p style={{ fontSize: 12, color: BLUE, fontWeight: 500, marginBottom: 14 }}>防水 · 抗UV · 貼紙製造機 · 多種工藝</p>
-                <p style={{ fontSize: 13, color: G500, lineHeight: 1.75, marginBottom: 20, flex: 1 }}>46年專業貼紙製造經驗，提供從材質選擇、結構設計、印刷工藝到後加工的完整解決方案。多元材質與工藝，滿足各式場景需求。</p>
+                <p style={{ fontSize: 12, color: BLUE, fontWeight: 500, marginBottom: 14 }}>防水 · 抗UV · 多種工藝 · 客製化解決方案</p>
+                <p style={{ fontSize: 13, color: G500, lineHeight: 1.75, marginBottom: 20, flex: 1 }}>46 年專業貼紙製造技術，從材質選擇、結構設計、印刷工藝到後加工，提供完整的客製化貼紙解決方案。防水、抗UV、多種工藝，滿足各類場景與品牌需求。</p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 20 }}>
-                  {['防水貼紙', '貼紙製造機', '燙金壓凹', '特殊材質', '3D浮雕貼'].map(t => <span key={t} style={{ fontSize: 11, color: G500, padding: '3px 9px', background: WHITE, borderRadius: 2, border: `1px solid ${SAND}` }}>{t}</span>)}
+                  {['貼紙製造機', '3D浮雕貼', '防水貼紙', '燙金壓凹', '特殊材質'].map(t => <span key={t} style={{ fontSize: 11, color: G500, padding: '3px 9px', background: WHITE, borderRadius: 2, border: `1px solid ${SAND}` }}>{t}</span>)}
                 </div>
                 <a href="/products/sticker" style={{ fontSize: 13, fontWeight: 600, color: BLUE, textDecoration: 'none' }}>產品瀏覽 →</a>
               </div>
