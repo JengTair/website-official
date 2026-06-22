@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Capabilities from '@/components/Capabilities';
-import Portfolio from '@/components/Portfolio';
 import HomeCTA from '@/components/HomeCTA';
 import HomeFooter from '@/components/HomeFooter';
 import homepageData from '@/data/homepage.json';
@@ -66,8 +65,6 @@ export default function Home() {
         />
 
         <Capabilities capabilities={homepageData.capabilities} />
-
-        <Portfolio items={homepageData.portfolio} />
 
         <HomeCTA />
       </main>
