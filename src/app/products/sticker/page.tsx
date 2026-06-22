@@ -63,12 +63,15 @@ const features = [
 ];
 
 const materials = [
-  { name: 'PVC 貼紙', desc: '耐用、防水、適合戶外使用，多種厚度可選' },
-  { name: 'PET 貼紙', desc: '透明或白色基材，高透明度、耐高溫' },
-  { name: '紙質貼紙', desc: '亮面/霧面/牛皮紙，環保可選，適合包裝標籤' },
-  { name: '特殊材質', desc: '鐳射、鏡面、絨面、螢光等特殊效果材質' },
-  { name: '雙面貼紙', desc: '透明基材雙面印刷，適合玻璃展示應用' },
-  { name: '3D 浮雕貼', desc: '立體浮雕質感，高級感十足，適合品牌形象' },
+  { name: '貼紙製造機', desc: '搭配自動化大量生產，提升出貨效率與穩定度' },
+  { name: '3D 浮雕貼', desc: '立體觸感與視覺層次兼具，適合品牌形象與高質感包裝' },
+  { name: '泡棉貼', desc: '具有厚度與立體效果，適合裝飾、活動與展示用途' },
+  { name: '轉印水晶貼', desc: '晶亮透明感強，轉印效果細緻，常用於精品與文創商品' },
+  { name: '油水貼', desc: '內含流動亮片，兼具趣味互動與視覺效果' },
+  { name: '行李箱貼(防水貼)', desc: '防水耐磨，適合長時間使用與戶外展示情境' },
+  { name: '紓壓貼(屁屁貼)', desc: '趣味造型與觸感兼具，適合活動贈送與話題商品' },
+  { name: '刺繡貼', desc: '具布感與精緻立體紋理，適合潮流、服飾與品牌聯名' },
+  { name: '贈品', desc: '香氛貼、香氛卡、防水貼，適合活動贈送與品牌推廣' },
 ];
 
 const crafts = [
@@ -105,19 +108,19 @@ export default function StickerPage() {
             46 年專業貼紙製造技術，從材質選擇、結構設計、印刷工藝到後加工，提供完整的客製化貼紙解決方案。防水、抗UV、多種工藝，滿足各類場景與品牌需求。
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            {['防水貼紙', '貼紙製造機', '燙金壓凹', '特殊材質', '3D浮雕貼'].map(t => (
+            {['貼紙製造機', '3D浮雕貼', '防水貼紙', '燙金壓凹', '特殊材質'].map(t => (
               <span key={t} style={{ fontSize: 12, color: ACCENT, padding: '5px 12px', background: WHITE, borderRadius: 4, border: `1px solid rgba(125,170,203,0.3)`, fontWeight: 500 }}>{t}</span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 材質選項 */}
+      {/* 貼紙款式 */}
       <section style={{ background: CREAM, padding: '60px 40px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
-          <h2 style={{ fontSize: 24, fontWeight: 800, color: G900, marginBottom: 8 }}>材質選項</h2>
-          <p style={{ fontSize: 14, color: G500, marginBottom: 32 }}>多樣材質，適應各種使用環境與需求</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+          <h2 style={{ fontSize: 24, fontWeight: 800, color: G900, marginBottom: 8 }}>貼紙款式</h2>
+          <p style={{ fontSize: 14, color: G500, marginBottom: 32 }}>可搭配不同主題與授權IP開發，打造兼具創意與互動性的DIY商品</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 16 }}>
             {materials.map(m => (
               <div key={m.name} style={{ background: ACCENT_L, borderRadius: 8, padding: '24px 20px', border: `1px solid rgba(125,170,203,0.2)` }}>
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: G900, marginBottom: 6 }}>{m.name}</h3>
