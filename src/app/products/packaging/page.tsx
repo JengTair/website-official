@@ -82,20 +82,34 @@ const BagIcon3Zipper = () => (
 const BagIcon3Stand = () => (
   <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
     <defs>
-      <radialGradient id="standGlow" cx="0.5" cy="0.42" r="0.55">
-        <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1"/>
-        <stop offset="60%" stopColor="#EEF5FC" stopOpacity="0.9"/>
-        <stop offset="100%" stopColor="#DCEAF8" stopOpacity="0.4"/>
+      <radialGradient id="standGlow" cx="0.5" cy="0.44" r="0.52">
+        <stop offset="0%"   stopColor="#FFFFFF" stopOpacity="1"/>
+        <stop offset="40%"  stopColor="#EEF5FC" stopOpacity="0.92"/>
+        <stop offset="100%" stopColor="#BACED9" stopOpacity="0.45"/>
       </radialGradient>
     </defs>
-    {/* body — rounded, slightly wider at bottom */}
-    <path d="M15 8 Q15 6 26 6 Q37 6 37 8 L38 36 Q38 45 26 45 Q14 45 14 36 Z"
+    {/* outer body: wider at bottom, fully rounded */}
+    <path d="
+      M19 7 H33
+      Q37 7 37.5 11
+      L40 38
+      Q40.5 46 26 46
+      Q11.5 46 11.5 38
+      L14.5 11
+      Q15 7 19 7 Z"
       stroke={C} strokeWidth="1.8" fill="url(#standGlow)"/>
-    {/* top flat seal band */}
-    <path d="M15 8 Q15 6 26 6 Q37 6 37 8 L37 13 Q37 14 26 14 Q15 14 15 13 Z"
-      stroke={C} strokeWidth="1.2" fill={C} fillOpacity="0.13"/>
-    {/* bottom gusset arc */}
-    <path d="M17 39 Q26 43.5 35 39" stroke={C} strokeWidth="1.4" fill="none"/>
+    {/* top seal band */}
+    <path d="
+      M19 7 H33
+      Q37 7 37.5 11
+      L37.2 14.5
+      Q37 15.5 26 15.5
+      Q15 15.5 14.8 14.5
+      L14.5 11
+      Q15 7 19 7 Z"
+      stroke={C} strokeWidth="1.2" fill={C} fillOpacity="0.14"/>
+    {/* bottom gusset fold line */}
+    <path d="M15.5 40 Q26 44.5 36.5 40" stroke={C} strokeWidth="1.4" fill="none"/>
   </svg>
 );
 
