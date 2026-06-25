@@ -81,14 +81,16 @@ const BagIcon3Zipper = () => (
 
 const BagIcon3Stand = () => (
   <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-    {/* doypack body — wider at bottom */}
-    <path d="M15 6 L37 6 L41 40 Q41 44 26 46 Q11 44 11 40 Z" stroke={C} strokeWidth="1.8" fill="none"/>
-    {/* top seal */}
-    <rect x="15" y="6" width="22" height="5" rx="1" stroke={C} strokeWidth="1.2" fill={C} fillOpacity="0.12"/>
-    {/* bottom gusset oval */}
-    <ellipse cx="26" cy="44" rx="13" ry="3.5" stroke={C} strokeWidth="1.4" fill="none"/>
+    {/* outer body */}
+    <path d="M16 7 H36 L39 40 C39 43 34 45 26 45 C18 45 13 43 13 40 Z" stroke={C} strokeWidth="1.8" fill="none"/>
+    {/* top seal band */}
+    <rect x="16" y="7" width="20" height="5" rx="1.2" stroke={C} strokeWidth="1.2" fill={C} fillOpacity="0.12"/>
     {/* zipper line */}
-    <line x1="17" y1="17" x2="35" y2="17" stroke={C} strokeWidth="1.2" strokeDasharray="2 2"/>
+    <line x1="18" y1="16" x2="34" y2="16" stroke={C} strokeWidth="1.2" strokeDasharray="2 2"/>
+    {/* front panel hint */}
+    <path d="M17 12 H35 L37 39 C37 41 33.5 43 26 43 C18.5 43 15 41 15 39 Z" stroke={C} strokeWidth="1.1" fill="none" opacity="0.75"/>
+    {/* bottom gusset */}
+    <path d="M18 40 C21 42 31 42 34 40" stroke={C} strokeWidth="1.2" fill="none"/>
   </svg>
 );
 
