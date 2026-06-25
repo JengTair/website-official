@@ -255,7 +255,7 @@ export default function PackagingPage() {
             客製化軟包裝
           </h1>
           <p style={{ fontSize: 16, color: G500, lineHeight: 1.8, maxWidth: 620, marginBottom: 32 }}>
-            二封袋、三封袋、站立袋、背封袋等 7 種袋型；鋁箔、電鍍、透明PET、尼龍等多種材質。數位印刷無版費，少量多樣交期快，支援品牌全彩客製印刷。
+            提供多種袋型與複合材質選擇，支持數位印刷與凹版印刷，從少量試單到大量量產，協助品牌快速打造專屬包裝。
           </p>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {['少量多樣', '交期快', '多種袋型', '多種材質'].map(t => (
