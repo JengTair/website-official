@@ -195,14 +195,6 @@ const processSteps = [
 
 const quoteChecklist = ['產品內容物', '袋型', '尺寸', '數量', '材質', '成袋或成捲', '亮面或霧面'];
 
-const pricingFactors = [
-  { num: '01', label: '材料成本', en: 'Material Cost' },
-  { num: '02', label: '尺寸規格', en: 'Size Specs' },
-  { num: '03', label: '訂購數量', en: 'Order Qty' },
-  { num: '04', label: '加工方式', en: 'Process' },
-  { num: '05', label: '特殊需求', en: 'Special Req.' },
-];
-
 const faqs = [
   { q: 'MOQ 最低訂購量是多少？', a: '依袋型與尺寸不同，數位印刷可少量起印，具體 MOQ 請洽業務確認。' },
   { q: '交期需要多久？', a: '打樣約 7–14 個工作天，量產視數量與袋型約 2–4 週。' },
@@ -408,23 +400,6 @@ export default function PackagingPage() {
                 </div>
                 {i < processSteps.length - 1 && <div className="process-arrow" key={`arrow-${i}`}>→</div>}
               </>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 影響報價因素 */}
-      <section className="pkg-section" style={{ background: SAND }}>
-        <div style={{ maxWidth: 1160, margin: '0 auto' }}>
-          <h2 style={{ fontSize: 28, fontWeight: 800, color: G900, marginBottom: 8 }}>影響報價因素</h2>
-          <p style={{ fontSize: 14, color: G500, marginBottom: 32 }}>提供以下資訊，協助我們提供最準確的報價</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 16 }}>
-            {pricingFactors.map(f => (
-              <div key={f.num} style={{ background: WHITE, borderRadius: 10, padding: '24px 16px', textAlign: 'center', border: '1px solid rgba(0,0,0,0.06)' }}>
-                <div style={{ fontSize: 28, fontWeight: 900, color: BLUE, marginBottom: 10 }}>{f.num}</div>
-                <div style={{ fontSize: 16, fontWeight: 700, color: G900, marginBottom: 4 }}>{f.label}</div>
-                <div style={{ fontSize: 11, color: G500 }}>{f.en}</div>
-              </div>
             ))}
           </div>
         </div>
