@@ -258,7 +258,7 @@ export default function PackagingPage() {
             提供多種袋型與複合材質選擇，支持數位印刷與凹版印刷，從少量試單到大量量產，協助品牌快速打造專屬包裝。
           </p>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            {['少量多樣', '交期快', '多種袋型', '多種材質'].map(t => (
+            {['少量起訂', '無版費數位印刷', '快速交貨'].map(t => (
               <span key={t} style={{ fontSize: 12, color: G700, padding: '5px 14px', background: WHITE, borderRadius: 20, border: `1px solid ${SAND}`, fontWeight: 600 }}>{t}</span>
             ))}
           </div>
