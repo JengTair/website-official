@@ -202,15 +202,6 @@ const faqs = [
   { q: '可以先打樣嗎？', a: '可以，我們提供打樣服務，確認材質、尺寸、印刷效果後再下量產訂單。' },
 ];
 
-const specs = [
-  { label: '材質', value: 'PET、鋁箔、電鍍、尼龍NY、三氧化二鋁，複合材質可客製' },
-  { label: '上光膜', value: 'PET16 亮（成捲）/ OPP20 亮（成袋）/ MOPP20 霧（成袋/成捲）' },
-  { label: '印刷色數', value: '最多 8 色，支援 CMYK 及專色' },
-  { label: '尺寸', value: '依商品尺寸全面客製，無固定限制' },
-  { label: '起訂量', value: '數位印刷少量起印，凹版適合大批量，洽談確認' },
-  { label: '認證', value: 'SGS、食品級（依材質）、REACH' },
-];
-
 export default function PackagingPage() {
   return (
     <>
@@ -415,22 +406,6 @@ export default function PackagingPage() {
               <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 8, background: WHITE, border: `1px solid ${SAND}`, borderRadius: 8, padding: '10px 20px' }}>
                 <span style={{ width: 22, height: 22, borderRadius: '50%', background: BLUE, color: WHITE, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700, flexShrink: 0 }}>✓</span>
                 <span style={{ fontSize: 15, fontWeight: 600, color: G900 }}>{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 規格與條件 */}
-      <section className="pkg-section" style={{ background: ACCENT_L }}>
-        <div style={{ maxWidth: 1160, margin: '0 auto' }}>
-          <h2 style={{ fontSize: 28, fontWeight: 800, color: G900, marginBottom: 8 }}>規格與條件</h2>
-          <p style={{ fontSize: 14, color: G500, marginBottom: 32 }}>詳細規格請聯絡業務洽談</p>
-          <div className="pkg-grid-specs">
-            {specs.map(s => (
-              <div key={s.label} style={{ padding: '20px 24px', borderRadius: 8, border: `1px solid ${SAND}`, background: WHITE }}>
-                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: BLUE, textTransform: 'uppercase', marginBottom: 6 }}>{s.label}</div>
-                <div style={{ fontSize: 14, color: G900, fontWeight: 500 }}>{s.value}</div>
               </div>
             ))}
           </div>
