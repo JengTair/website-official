@@ -81,16 +81,25 @@ const BagIcon3Zipper = () => (
 
 const BagIcon3Stand = () => (
   <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+    <defs>
+      <linearGradient id="standBodyFill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#FFFFFF" />
+        <stop offset="100%" stopColor="#F3F8FD" />
+      </linearGradient>
+    </defs>
     {/* outer body */}
-    <path d="M16 7 H36 L39 40 C39 43 34 45 26 45 C18 45 13 43 13 40 Z" stroke={C} strokeWidth="1.8" fill="none"/>
+    <path d="M17 8 H35 L39 35 C40 41 34.5 45 26 45 C17.5 45 12 41 13 35 Z" stroke={C} strokeWidth="1.8" fill="url(#standBodyFill)"/>
     {/* top seal band */}
-    <rect x="16" y="7" width="20" height="5" rx="1.2" stroke={C} strokeWidth="1.2" fill={C} fillOpacity="0.12"/>
+    <rect x="17" y="8" width="18" height="5" rx="1.2" stroke={C} strokeWidth="1.2" fill={C} fillOpacity="0.12"/>
     {/* zipper line */}
-    <line x1="18" y1="16" x2="34" y2="16" stroke={C} strokeWidth="1.2" strokeDasharray="2 2"/>
+    <line x1="18.5" y1="16" x2="33.5" y2="16" stroke={C} strokeWidth="1.2" strokeDasharray="2 2"/>
+    {/* side seams */}
+    <path d="M17 13 L15.5 34" stroke={C} strokeWidth="1.1" opacity="0.72"/>
+    <path d="M35 13 L36.5 34" stroke={C} strokeWidth="1.1" opacity="0.72"/>
     {/* front panel hint */}
-    <path d="M17 12 H35 L37 39 C37 41 33.5 43 26 43 C18.5 43 15 41 15 39 Z" stroke={C} strokeWidth="1.1" fill="none" opacity="0.75"/>
-    {/* bottom gusset */}
-    <path d="M18 40 C21 42 31 42 34 40" stroke={C} strokeWidth="1.2" fill="none"/>
+    <path d="M19 13 H33 L35.5 34 C35.8 38 32.5 41 26 41 C19.5 41 16.2 38 16.5 34 Z" stroke={C} strokeWidth="1" fill="none" opacity="0.55"/>
+    {/* bottom gusset curve */}
+    <path d="M18 39 C21.2 42.3 30.8 42.3 34 39" stroke={C} strokeWidth="1.2" fill="none"/>
   </svg>
 );
 
