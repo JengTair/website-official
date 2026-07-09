@@ -166,6 +166,27 @@ export default function StickerPage() {
                       />
                     </div>
                   </div>
+                ) : m.name === '刺繡貼' ? (
+                  <div style={{ display: 'grid', gap: 12, marginBottom: 14 }}>
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', background: WHITE }}>
+                      <Image
+                        src="/images/02_產品卡片圖800x600px-200KB/三麗鷗/產品卡片圖-三麗鷗刺繡貼-02.jpg"
+                        alt="三麗鷗刺繡貼 02"
+                        fill
+                        sizes="(max-width: 767px) 100vw, 33vw"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', background: WHITE }}>
+                      <Image
+                        src="/images/02_產品卡片圖800x600px-200KB/三麗鷗/產品卡片圖-三麗鷗刺繡貼-03.jpg"
+                        alt="三麗鷗刺繡貼 03"
+                        fill
+                        sizes="(max-width: 767px) 100vw, 33vw"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
+                  </div>
                 ) : null}
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: G900, marginBottom: 6 }}>{m.name}</h3>
                 <p style={{ fontSize: 13, color: G500, lineHeight: 1.6, margin: 0 }}>{m.desc}</p>
