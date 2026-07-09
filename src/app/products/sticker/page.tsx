@@ -10,27 +10,6 @@ export const metadata: Metadata = {
 
 const ACCENT = '#7DAACB';
 const ACCENT_D = '#5B8EAF';
-                ) : m.name === '轉印水晶貼' ? (
-                  <div style={{ display: 'grid', gap: 12, marginBottom: 14 }}>
-                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', background: WHITE }}>
-                      <Image
-                        src="/images/02_產品卡片圖800x600px-200KB/貼紙製造/產品卡片圖-冰雪星鑽貼-02.jpg"
-                        alt="冰雪星鑽貼 02"
-                        fill
-                        sizes="(max-width: 767px) 100vw, 33vw"
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', background: WHITE }}>
-                      <Image
-                        src="/images/02_產品卡片圖800x600px-200KB/貼紙製造/產品卡片圖-冰雪星鑽貼-03.jpg"
-                        alt="冰雪星鑽貼 03"
-                        fill
-                        sizes="(max-width: 767px) 100vw, 33vw"
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                  </div>
 const ACCENT_L = '#F3F7F7';
 const G900 = '#1A1A1A';
 const G500 = '#737373';
@@ -181,6 +160,27 @@ export default function StickerPage() {
                       <Image
                         src="/images/02_產品卡片圖800x600px-200KB/貼紙製造/產品卡片圖-行李箱貼-03.jpg"
                         alt="行李箱貼 03"
+                        fill
+                        sizes="(max-width: 767px) 100vw, 33vw"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
+                  </div>
+                ) : m.name === '轉印水晶貼' ? (
+                  <div style={{ display: 'grid', gap: 12, marginBottom: 14 }}>
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', background: WHITE }}>
+                      <Image
+                        src="/images/02_產品卡片圖800x600px-200KB/貼紙製造/產品卡片圖-冰雪星鑽貼-02.jpg"
+                        alt="冰雪星鑽貼 02"
+                        fill
+                        sizes="(max-width: 767px) 100vw, 33vw"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', background: WHITE }}>
+                      <Image
+                        src="/images/02_產品卡片圖800x600px-200KB/貼紙製造/產品卡片圖-冰雪星鑽貼-03.jpg"
+                        alt="冰雪星鑽貼 03"
                         fill
                         sizes="(max-width: 767px) 100vw, 33vw"
                         style={{ objectFit: 'cover' }}
