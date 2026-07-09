@@ -78,12 +78,12 @@ const productGroups = [
     color: '#FF6B9D',
     desc: 'Hello Kitty、美樂蒂等全球授權品牌',
     items: [
-      { id: 5,  img: '/images/ip/ip-5.jpg',  name: '行李箱貼',        tags: ['行李箱', '旅遊'] },
-      { id: 6,  img: '/images/ip/ip-6.jpg',  name: '火漆印',          tags: ['火漆印', '封蠟'] },
-      { id: 7,  img: '/images/ip/ip-7.jpg',  name: '水鑽貼',          tags: ['水鑽', '閃亮'] },
-      { id: 8,  img: '/images/ip/ip-8.jpg',  name: 'Q萌刺繡貼',      tags: ['刺繡', '亮片'] },
-      { id: 9,  img: '/images/ip/ip-9.jpg',  name: '燙金線條轉印貼',  tags: ['燙金', '轉印'] },
-      { id: 10, img: '/images/ip/ip-10.jpg', name: '閃亮絨毛貼',      tags: ['絨毛', '金邊刺繡'] },
+      { id: 5,  img: '/images/三麗鷗/三麗鷗行李箱貼.jpg',        name: '行李箱貼',        tags: ['行李箱', '旅遊'] },
+      { id: 6,  img: '/images/三麗鷗/三麗鷗火漆印.jpg',          name: '火漆印',          tags: ['火漆印', '封蠟'] },
+      { id: 7,  img: '/images/三麗鷗/三麗鷗水鑽貼.jpg',          name: '水鑽貼',          tags: ['水鑽', '閃亮'] },
+      { id: 8,  img: '/images/三麗鷗/三麗鷗Q萌刺繡貼.jpg',      name: 'Q萌刺繡貼',      tags: ['刺繡', '亮片'] },
+      { id: 9,  img: '/images/三麗鷗/三麗鷗燙金線條轉印貼.jpg',  name: '燙金線條轉印貼',  tags: ['燙金', '轉印'] },
+      { id: 10, img: '/images/三麗鷗/三麗鷗毛巾布刺繡貼.jpg',    name: '閃亮絨毛貼',      tags: ['絨毛', '金邊刺繡'], layout: 'mosaic' },
     ],
   },
   {
@@ -91,11 +91,13 @@ const productGroups = [
     color: '#F5A623',
     desc: '日本超人氣動漫 IP',
     items: [
-      { id: 1,  img: '/images/ip/ip-1.jpg',  name: '浮雕貼',          tags: ['浮雕', '3D 立體'] },
-      { id: 2,  img: '/images/ip/ip-2.jpg',  name: '造型捲狀貼',      tags: ['捲狀', '造型貼紙'] },
-      { id: 3,  img: '/images/ip/ip-3.jpg',  name: '油水貼＋立體吊飾', tags: ['油水貼', '吊飾'] },
-      { id: 4,  img: '/images/ip/ip-4.jpg',  name: '屁屁貼',          tags: ['造型貼紙'] },
-      { id: 11, img: '/images/ip/ip-11.jpg', name: '飄帶＋DIY飄帶',  tags: ['飄帶', 'DIY'] },
+      { id: 1,  img: '/images/蠟筆小新/蠟筆小新浮雕貼.jpg',          name: '浮雕貼',           tags: ['浮雕', '3D 立體'] },
+      { id: 2,  img: '/images/蠟筆小新/蠟筆小新造型捲狀貼.png',      name: '造型捲狀貼',       tags: ['捲狀', '造型貼紙'] },
+      { id: 3,  img: '/images/蠟筆小新/蠟筆小新油水貼.jpg',          name: '油水貼',           tags: ['油水貼', '亮面'] },
+      { id: 5,  img: '/images/蠟筆小新/蠟筆小新立體吊飾.jpg',        name: '立體吊飾',         tags: ['吊飾', '立體'] },
+      { id: 4,  img: '/images/蠟筆小新/蠟筆小新屁屁貼.jpg',          name: '屁屁貼',           tags: ['造型貼紙'] },
+      { id: 11, img: '/images/蠟筆小新/蠟筆小新飄帶.jpg',            name: '飄帶',             tags: ['飄帶'] },
+      { id: 12, img: '/images/蠟筆小新/蠟筆小新DIY飄帶.jpg',         name: 'DIY飄帶',          tags: ['飄帶', 'DIY'] },
     ],
   },
   {
@@ -103,7 +105,7 @@ const productGroups = [
     color: ACCENT,
     desc: '其他授權相關商品',
     items: [
-      { id: 12, img: '/images/ip/ip-12.jpg', name: '樂蓋貼印機',      tags: ['貼印機', '機器'] },
+      { id: 12, img: '/images/授權周邊/樂蓋貼印機4款.jpg', name: '樂蓋貼印機',      tags: ['貼印機', '機器'] },
     ],
   },
 ];
@@ -129,7 +131,7 @@ export default function IPLicensingPage() {
           @keyframes ip-float2 { 0%,100%{ transform: translateY(0) rotate(0deg); } 50%{ transform: translateY(-8px) rotate(-6deg); } }
         `}</style>
 
-        <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'center' }}>
+        <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 28, alignItems: 'center' }}>
           {/* 左側文字 */}
           <div style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
@@ -149,26 +151,13 @@ export default function IPLicensingPage() {
             </div>
           </div>
 
-          {/* 右側：蠟筆小新產品圖堆疊裝飾 */}
-          <div style={{ position: 'relative', width: 260, height: 320, flexShrink: 0, display: 'none' }} className="ip-hero-deco">
-            {/* 底層卡 */}
-            <div style={{ position: 'absolute', top: 24, left: 24, width: 200, height: 256, borderRadius: 16, overflow: 'hidden', transform: 'rotate(-8deg)', boxShadow: '0 8px 32px rgba(0,0,0,0.13)', border: `2px solid ${WHITE}` }}>
+          {/* 右側：授權商品主圖 */}
+          <div style={{ position: 'relative', width: 500, height: 560, flexShrink: 0 }} className="ip-hero-deco">
+            <div aria-hidden style={{ position: 'absolute', top: 0, right: 6, width: 110, height: 110, borderRadius: '50%', background: '#F5A623', opacity: 0.05, filter: 'blur(2px)' }} />
+            <div aria-hidden style={{ position: 'absolute', bottom: 26, left: 14, width: 88, height: 88, borderRadius: '50%', background: ACCENT, opacity: 0.05, filter: 'blur(2px)' }} />
+            <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', background: 'transparent' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/ip/ip-2.jpg" alt="蠟筆小新捲狀貼" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            </div>
-            {/* 中層卡 */}
-            <div style={{ position: 'absolute', top: 12, left: 10, width: 200, height: 256, borderRadius: 16, overflow: 'hidden', transform: 'rotate(-3deg)', boxShadow: '0 8px 32px rgba(0,0,0,0.13)', border: `2px solid ${WHITE}` }}>
-              {/* eslint-disable-next-line @next/next/no_img-element */}
-              <img src="/images/ip/ip-3.jpg" alt="蠟筆小新油水貼" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            </div>
-            {/* 頂層卡 */}
-            <div style={{ position: 'absolute', top: 0, left: 0, width: 200, height: 256, borderRadius: 16, overflow: 'hidden', transform: 'rotate(2deg)', boxShadow: '0 12px 40px rgba(0,0,0,0.18)', border: `2px solid ${WHITE}` }}>
-              {/* eslint-disable-next-line @next/next/no_img-element */}
-              <img src="/images/ip/ip-1.jpg" alt="蠟筆小新浮雕貼" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            </div>
-            {/* 品牌色標籤 */}
-            <div style={{ position: 'absolute', bottom: 0, right: 0, background: '#F5A623', color: WHITE, fontSize: 11, fontWeight: 700, padding: '5px 12px', borderRadius: 20, letterSpacing: '0.05em', boxShadow: '0 4px 12px rgba(245,166,35,0.4)' }}>
-              蠟筆小新 Official
+              <img src="/images/01_HERO背景圖1920x1080px-500KB/IP授權產品-情境照03.png" alt="IP 授權產品情境照" style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center center', display: 'block', filter: 'drop-shadow(0 10px 18px rgba(200,123,97,0.08))' }} />
             </div>
           </div>
         </div>
@@ -211,8 +200,12 @@ export default function IPLicensingPage() {
             .ip-card { background: ${WHITE}; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.07); cursor: pointer; transition: transform .25s ease, box-shadow .25s ease; }
             .ip-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
             .ip-card-img { position: relative; aspect-ratio: 3/4; overflow: hidden; background: ${ACCENT_L}; }
-            .ip-card-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 38%; transition: transform .5s ease; }
+            .ip-card-img img { position: absolute; inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px); object-fit: contain; object-position: center center; transition: transform .5s ease; }
+            .ip-card-img--wide img { inset: 14px 8px; width: calc(100% - 16px); height: calc(100% - 28px); }
+            .ip-card-img--mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 6px; padding: 10px; }
+            .ip-card-mosaic-cell { border-radius: 6px; background-repeat: no-repeat; background-size: 400% 100%; transition: transform .5s ease; }
             .ip-card:hover .ip-card-img img { transform: scale(1.06); }
+            .ip-card:hover .ip-card-mosaic-cell { transform: scale(1.02); }
             .ip-card-body { padding: 16px 18px 20px; }
             .ip-card-name { font-size: 15px; font-weight: 700; color: ${G900}; margin-bottom: 10px; line-height: 1.35; }
             .ip-card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
@@ -239,8 +232,17 @@ export default function IPLicensingPage() {
                 <div className="ip-grid">
                   {g.items.map(p => (
                     <div key={p.id} className="ip-card">
-                      <div className="ip-card-img">
-                        <img src={p.img} alt={p.name} />
+                      <div className={`ip-card-img ${p.layout === 'mosaic' ? 'ip-card-img--mosaic' : p.name === '樂蓋貼印機' ? 'ip-card-img--wide' : ''}`}>
+                        {p.layout === 'mosaic' ? (
+                          <>
+                            <div className="ip-card-mosaic-cell" style={{ backgroundImage: `url(${p.img})`, backgroundPosition: '0% center' }} />
+                            <div className="ip-card-mosaic-cell" style={{ backgroundImage: `url(${p.img})`, backgroundPosition: '33.333% center' }} />
+                            <div className="ip-card-mosaic-cell" style={{ backgroundImage: `url(${p.img})`, backgroundPosition: '66.666% center' }} />
+                            <div className="ip-card-mosaic-cell" style={{ backgroundImage: `url(${p.img})`, backgroundPosition: '100% center' }} />
+                          </>
+                        ) : (
+                          <img src={p.img} alt={p.name} />
+                        )}
                       </div>
                       <div className="ip-card-body">
                         <div className="ip-card-name">{p.name}</div>

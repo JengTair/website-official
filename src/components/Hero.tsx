@@ -31,8 +31,8 @@ export default function Hero({ description, cta }: HeroProps) {
   return (
     <>
       <style>{`
-        .hero-section { min-height: 70vh; display: flex; align-items: center; border-bottom: 1px solid ${SAND}; background: radial-gradient(ellipse 80% 60% at 100% 100%, rgba(232,219,179,0.45) 0%, transparent 70%), ${CREAM}; position: relative; overflow: hidden; }
-        .hero-content { padding: 80px 40px; max-width: 1160px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; }
+        .hero-section { min-height: 52vh; display: flex; align-items: center; border-bottom: 1px solid ${SAND}; background: radial-gradient(ellipse 80% 60% at 100% 100%, rgba(232,219,179,0.45) 0%, transparent 70%), ${CREAM}; position: relative; overflow: hidden; }
+        .hero-content { padding: 40px 40px; max-width: 1160px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: center; position: relative; }
         .hero-text { display: flex; flex-direction: column; position: relative; }
         .hero-ctas { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 0; position: relative; }
         .hero-images { display: grid; grid-template-columns: 1.15fr 0.85fr; grid-template-rows: 1fr 1fr; gap: 10px; height: 460px; }
@@ -45,9 +45,9 @@ export default function Hero({ description, cta }: HeroProps) {
         .hero-img-side:first-of-type { transform: translateY(-6px); }
         .hero-img-side:last-of-type { transform: translateY(6px); }
         /* C方案：型錄卡片堆疊 */
-        .hero-cards { position: relative; height: 460px; display: flex; align-items: center; justify-content: center; }
-        .hero-card { position: relative; width: 100%; height: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 18px 48px rgba(0,0,0,0.16); border: 1px solid rgba(255,255,255,0.28); }
-        .hero-card img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+        .hero-cards { position: relative; min-height: 480px; display: flex; align-items: center; justify-content: center; }
+        .hero-card { position: relative; width: min(100%, 520px); aspect-ratio: 5 / 6; border-radius: 28px; overflow: hidden; background: transparent; transform: translate(-24px, -10px); }
+        .hero-card img { width: 100%; height: 100%; object-fit: contain; object-position: center center; display: block; filter: drop-shadow(0 12px 24px rgba(200,123,97,0.08)); }
         /* B方案：IP品牌標籤 */
         .hero-ip-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 28px; padding-top: 20px; border-top: 1px solid ${SAND}; }
         .hero-ip-label { font-size: 10px; font-weight: 600; letter-spacing: .08em; color: ${G500}; text-transform: uppercase; }
@@ -60,6 +60,7 @@ export default function Hero({ description, cta }: HeroProps) {
           .hero-ctas { flex-direction: column; align-items: stretch; }
           .hero-ctas a { text-align: center; box-sizing: border-box; justify-content: center; }
           .hero-ip-badges { flex-wrap: wrap; gap: 6px; }
+          .hero-card { transform: none; }
           .products-grid { grid-template-columns: 1fr; }
           .products-section { padding: 40px 20px; }
           .stats-grid { grid-template-columns: repeat(3, 1fr); }
@@ -313,8 +314,10 @@ export default function Hero({ description, cta }: HeroProps) {
 
           {/* C方案：主視覺產品照 */}
           <div className="hero-cards" aria-hidden>
+            <div aria-hidden style={{ position: 'absolute', top: 18, right: 18, width: 120, height: 120, borderRadius: '50%', background: '#F5A623', opacity: 0.06, filter: 'blur(2px)' }} />
+            <div aria-hidden style={{ position: 'absolute', bottom: 22, left: 18, width: 88, height: 88, borderRadius: '50%', background: BLUE, opacity: 0.06, filter: 'blur(2px)' }} />
             <div className="hero-card">
-              <img src="/images/01_HERO背景圖1920x1080px-500KB/主頁產品-情境照.jpg" alt="" />
+              <img src="/images/01_HERO背景圖1920x1080px-500KB/主頁產品-情境照03.png" alt="" />
             </div>
           </div>
 

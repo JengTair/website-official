@@ -80,37 +80,13 @@ const BagIcon3Zipper = () => (
 );
 
 const BagIcon3Stand = () => (
-  <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-    <defs>
-      <radialGradient id="standGlow" cx="0.5" cy="0.44" r="0.52">
-        <stop offset="0%"   stopColor="#FFFFFF" stopOpacity="1"/>
-        <stop offset="40%"  stopColor="#EEF5FC" stopOpacity="0.92"/>
-        <stop offset="100%" stopColor="#BACED9" stopOpacity="0.45"/>
-      </radialGradient>
-    </defs>
-    {/* outer body: wider at bottom, fully rounded */}
-    <path d="
-      M19 7 H33
-      Q37 7 37.5 11
-      L40 38
-      Q40.5 46 26 46
-      Q11.5 46 11.5 38
-      L14.5 11
-      Q15 7 19 7 Z"
-      stroke={C} strokeWidth="1.8" fill="url(#standGlow)"/>
-    {/* top seal band */}
-    <path d="
-      M19 7 H33
-      Q37 7 37.5 11
-      L37.2 14.5
-      Q37 15.5 26 15.5
-      Q15 15.5 14.8 14.5
-      L14.5 11
-      Q15 7 19 7 Z"
-      stroke={C} strokeWidth="1.2" fill={C} fillOpacity="0.14"/>
-    {/* bottom gusset fold line */}
-    <path d="M15.5 40 Q26 44.5 36.5 40" stroke={C} strokeWidth="1.4" fill="none"/>
-  </svg>
+  <span style={{ width: 65, height: 65, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+    <img
+      src="/images/三封站立袋.png"
+      alt="三封站立袋"
+      style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
+    />
+  </span>
 );
 
 const BagIconPillow = () => (

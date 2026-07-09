@@ -61,6 +61,10 @@
   ],
   "navigation": [
     {
+      "label": "首頁",
+      "href": "/"
+    },
+    {
       "label": "產品",
       "href": "/#products",
       "children": [

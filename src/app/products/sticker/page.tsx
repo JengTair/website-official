@@ -8,14 +8,15 @@ export const metadata: Metadata = {
   description: '正台國際 46 年專業貼紙製造，提供防水、抗UV、燙金壓凹、3D浮雕等多種工藝，客製化解決方案。',
 };
 
-const ACCENT = '#7DAACB';
-const ACCENT_D = '#5B8EAF';
-const ACCENT_L = '#F3F7F7';
+const ACCENT = '#F27C68';
+const ACCENT_D = '#D9624D';
+const ACCENT_L = '#FFF1E8';
+const MINT = '#7EE3D6';
 const G900 = '#1A1A1A';
 const G500 = '#737373';
-const G100 = '#F5F5F5';
-const SAND = '#E8DBB3';
-const CREAM = '#FFFDEB';
+const G100 = '#FFF5F0';
+const SAND = '#FFD6B8';
+const CREAM = '#FFF8F2';
 const WHITE = '#FFFFFF';
 
 const features = [
@@ -96,28 +97,58 @@ export default function StickerPage() {
       <Navigation items={homepageData.navigation} />
 
       {/* Hero */}
-      <section style={{ background: ACCENT_L, borderBottom: `1px solid rgba(125,170,203,0.2)`, padding: '72px 40px 60px' }}>
-        <div style={{ maxWidth: 1160, margin: '0 auto' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
-            <div style={{ width: 24, height: 1, background: ACCENT }} />
-            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.22em', color: ACCENT, textTransform: 'uppercase' }}>Sticker Manufacturing</span>
+      <section style={{ background: 'radial-gradient(circle at 16% 28%, rgba(126,227,214,0.30) 0%, rgba(126,227,214,0.18) 18%, transparent 34%), linear-gradient(135deg, #FFF8F2 0%, #FFF0E6 60%, #EAFBF8 100%)', borderBottom: `1px solid rgba(242,124,104,0.16)`, padding: '72px 40px 60px' }}>
+        <div aria-hidden style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
+          <div style={{ position: 'absolute', top: '6%', left: '3%', width: 58, height: 58, borderRadius: '50%', background: '#FFB58F', opacity: 0.28, filter: 'blur(1px)' }} />
+          <div style={{ position: 'absolute', top: '18%', left: '10%', width: 18, height: 18, borderRadius: '50%', background: '#FFD25E', opacity: 0.40 }} />
+          <div style={{ position: 'absolute', top: '10%', right: '9%', width: 72, height: 72, borderRadius: '50%', background: '#FF9DB2', opacity: 0.18, filter: 'blur(2px)' }} />
+          <div style={{ position: 'absolute', top: '42%', right: '4%', width: 26, height: 26, borderRadius: 8, background: '#FF8EA8', opacity: 0.24, transform: 'rotate(18deg)' }} />
+          <div style={{ position: 'absolute', bottom: '18%', left: '6%', width: 42, height: 42, borderRadius: '50%', background: ACCENT, opacity: 0.20, filter: 'blur(1px)' }} />
+          <div style={{ position: 'absolute', bottom: '10%', right: '14%', width: 34, height: 34, borderRadius: '50%', background: '#FFD86B', opacity: 0.30 }} />
+          <div style={{ position: 'absolute', top: '52%', left: '22%', width: 16, height: 16, borderRadius: '50%', background: MINT, opacity: 0.20 }} />
+          <div style={{ position: 'absolute', top: '28%', left: '47%', width: 44, height: 44, opacity: 0.6 }}>
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+              <path d="M22 4L24.4 18L40 22L24.4 26L22 40L19.6 26L4 22L19.6 18L22 4Z" fill="#FFB58F" opacity="0.82" />
+            </svg>
           </div>
-          <h1 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 900, color: G900, letterSpacing: '-1px', lineHeight: 1.1, marginBottom: 20 }}>
-            貼紙製造
-          </h1>
-          <p style={{ fontSize: 16, color: G500, lineHeight: 1.8, maxWidth: 600, marginBottom: 32 }}>
-            46 年專業貼紙製造技術，從材質選擇、結構設計、印刷工藝到後加工，提供完整的客製化貼紙解決方案。防水、抗UV、多種工藝，滿足各類場景與品牌需求。
-          </p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            {['貼紙製造機', '3D浮雕貼', '防水貼紙', '燙金壓凹', '特殊材質'].map(t => (
-              <span key={t} style={{ fontSize: 12, color: ACCENT, padding: '5px 12px', background: WHITE, borderRadius: 4, border: `1px solid rgba(125,170,203,0.3)`, fontWeight: 500 }}>{t}</span>
-            ))}
+        </div>
+        <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 460px', gap: 56, alignItems: 'center' }}>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+              <div style={{ width: 24, height: 1, background: ACCENT }} />
+              <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.22em', color: ACCENT, textTransform: 'uppercase' }}>Sticker Manufacturing</span>
+            </div>
+            <h1 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 900, color: G900, letterSpacing: '-1px', lineHeight: 1.1, marginBottom: 20 }}>
+              貼紙製造
+            </h1>
+            <p style={{ fontSize: 16, color: G500, lineHeight: 1.8, maxWidth: 600, marginBottom: 32 }}>
+              46 年專業貼紙製造技術，從材質選擇、結構設計、印刷工藝到後加工，提供完整的客製化貼紙解決方案。防水、抗UV、多種工藝，滿足各類場景與品牌需求。
+            </p>
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              {['貼紙製造機', '3D浮雕貼', '防水貼紙', '燙金壓凹', '特殊材質'].map(t => (
+                <span key={t} style={{ fontSize: 12, color: ACCENT, padding: '5px 12px', background: WHITE, borderRadius: 4, border: `1px solid rgba(125,170,203,0.3)`, fontWeight: 500 }}>{t}</span>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ position: 'relative', width: '100%', aspectRatio: '1 / 1', minHeight: 420 }}>
+            <div aria-hidden style={{ position: 'absolute', top: 8, right: 4, width: 90, height: 90, borderRadius: '50%', background: '#FFB58F', opacity: 0.12, filter: 'blur(2px)' }} />
+            <div aria-hidden style={{ position: 'absolute', bottom: 12, left: 10, width: 76, height: 76, borderRadius: '50%', background: MINT, opacity: 0.10, filter: 'blur(2px)' }} />
+            <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
+              <Image
+                src="/images/01_HERO背景圖1920x1080px-500KB/貼紙製造-情境照03.png"
+                alt="貼紙製造情境照"
+                fill
+                sizes="(max-width: 767px) 100vw, 460px"
+                style={{ objectFit: 'contain', objectPosition: 'center center', filter: 'drop-shadow(0 12px 24px rgba(232,219,179,0.08))' }}
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* 貼紙款式 */}
-      <section style={{ background: CREAM, padding: '60px 40px' }}>
+      <section style={{ background: 'linear-gradient(180deg, #FFF2E8 0%, #F7FFFD 100%)', padding: '60px 40px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
           <h2 style={{ fontSize: 24, fontWeight: 800, color: G900, marginBottom: 8 }}>貼紙款式</h2>
           <p style={{ fontSize: 14, color: G500, marginBottom: 32 }}>可搭配不同主題與授權IP開發，打造兼具創意與互動性的DIY商品</p>
@@ -323,7 +354,7 @@ export default function StickerPage() {
       </section>
 
       {/* 加工工藝 */}
-      <section style={{ background: SAND, padding: '60px 40px' }}>
+      <section style={{ background: 'linear-gradient(180deg, #FFF4EA 0%, #FFF8F2 100%)', padding: '60px 40px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
           <h2 style={{ fontSize: 24, fontWeight: 800, color: G900, marginBottom: 8 }}>加工工藝</h2>
           <p style={{ fontSize: 14, color: G500, marginBottom: 32 }}>豐富的後加工選項，提升商品質感與獨特性</p>
@@ -336,7 +367,7 @@ export default function StickerPage() {
       </section>
 
       {/* 服務特色 */}
-      <section style={{ background: CREAM, padding: '60px 40px' }}>
+      <section style={{ background: 'linear-gradient(180deg, #FFF5EF 0%, #FFF9F2 100%)', padding: '60px 40px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
           <h2 style={{ fontSize: 24, fontWeight: 800, color: G900, marginBottom: 8 }}>服務特色</h2>
           <p style={{ fontSize: 14, color: G500, marginBottom: 36 }}>46 年技術積累，品質與交期雙重保障</p>
@@ -353,7 +384,7 @@ export default function StickerPage() {
       </section>
 
       {/* 規格與條件 */}
-      <section style={{ background: SAND, padding: '60px 40px' }}>
+      <section style={{ background: 'linear-gradient(180deg, #FFF4E8 0%, #EAFBF8 100%)', padding: '60px 40px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
           <h2 style={{ fontSize: 24, fontWeight: 800, color: G900, marginBottom: 8 }}>規格與條件</h2>
           <p style={{ fontSize: 14, color: G500, marginBottom: 32 }}>詳細規格請聯絡業務洽談</p>
