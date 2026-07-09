@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import homepageData from '@/data/homepage.json';
@@ -120,6 +121,37 @@ export default function StickerPage() {
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
           <h2 style={{ fontSize: 24, fontWeight: 800, color: G900, marginBottom: 8 }}>貼紙款式</h2>
           <p style={{ fontSize: 14, color: G500, marginBottom: 32 }}>可搭配不同主題與授權IP開發，打造兼具創意與互動性的DIY商品</p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: 16, marginBottom: 24 }}>
+            <div style={{ position: 'relative', minHeight: 280, borderRadius: 14, overflow: 'hidden', background: ACCENT_L, border: '1px solid rgba(125,170,203,0.18)' }}>
+              <Image
+                src="/images/02_產品卡片圖800x600px-200KB/貼紙製造/產品卡片圖-授權貼紙機-01.jpg"
+                alt="貼紙製造產品照片"
+                fill
+                sizes="(max-width: 767px) 100vw, 60vw"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <div style={{ display: 'grid', gap: 16 }}>
+              <div style={{ position: 'relative', minHeight: 132, borderRadius: 14, overflow: 'hidden', background: ACCENT_L, border: '1px solid rgba(125,170,203,0.18)' }}>
+                <Image
+                  src="/images/02_產品卡片圖800x600px-200KB/貼紙製造/產品卡片圖-自有貼紙機-01.jpg"
+                  alt="貼紙製造產品照片 2"
+                  fill
+                  sizes="(max-width: 767px) 100vw, 40vw"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+              <div style={{ position: 'relative', minHeight: 132, borderRadius: 14, overflow: 'hidden', background: ACCENT_L, border: '1px solid rgba(125,170,203,0.18)' }}>
+                <Image
+                  src="/images/02_產品卡片圖800x600px-200KB/貼紙製造/產品卡片圖-行李箱貼-01.jpg"
+                  alt="貼紙製造產品照片 3"
+                  fill
+                  sizes="(max-width: 767px) 100vw, 40vw"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
+          </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 16 }}>
             {materials.map(m => (
               <div key={m.name} style={{ background: ACCENT_L, borderRadius: 8, padding: '24px 20px', border: `1px solid rgba(125,170,203,0.2)` }}>
