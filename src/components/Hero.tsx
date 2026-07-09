@@ -46,14 +46,8 @@ export default function Hero({ description, cta }: HeroProps) {
         .hero-img-side:last-of-type { transform: translateY(6px); }
         /* C方案：型錄卡片堆疊 */
         .hero-cards { position: relative; height: 460px; display: flex; align-items: center; justify-content: center; }
-        .hero-card { position: absolute; width: 68%; border-radius: 14px; overflow: hidden; aspect-ratio: 3/4; transition: transform .4s ease, box-shadow .4s ease; }
-        .hero-card img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; display: block; }
-        .hero-card:nth-child(1) { transform: translate(-30px, -10px) rotate(-7deg); box-shadow: 0 4px 18px rgba(0,0,0,0.10); z-index: 1; filter: brightness(0.92); }
-        .hero-card:nth-child(2) { transform: translate(10px, 14px) rotate(4deg); box-shadow: 0 8px 28px rgba(0,0,0,0.13); z-index: 2; filter: brightness(0.96); }
-        .hero-card:nth-child(3) { transform: translate(-8px, 0px) rotate(-1deg); box-shadow: 0 14px 44px rgba(0,0,0,0.18); z-index: 3; }
-        .hero-cards:hover .hero-card:nth-child(1) { transform: translate(-60px, -20px) rotate(-10deg); }
-        .hero-cards:hover .hero-card:nth-child(2) { transform: translate(50px, 20px) rotate(7deg); }
-        .hero-cards:hover .hero-card:nth-child(3) { transform: translate(-6px, 0px) rotate(-1deg); }
+        .hero-card { position: relative; width: 100%; height: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 18px 48px rgba(0,0,0,0.16); border: 1px solid rgba(255,255,255,0.28); }
+        .hero-card img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
         /* B方案：IP品牌標籤 */
         .hero-ip-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 28px; padding-top: 20px; border-top: 1px solid ${SAND}; }
         .hero-ip-label { font-size: 10px; font-weight: 600; letter-spacing: .08em; color: ${G500}; text-transform: uppercase; }
@@ -65,10 +59,6 @@ export default function Hero({ description, cta }: HeroProps) {
           .hero-content { grid-template-columns: 1fr; gap: 40px; padding: 48px 20px; }
           .hero-ctas { flex-direction: column; align-items: stretch; }
           .hero-ctas a { text-align: center; box-sizing: border-box; justify-content: center; }
-          .hero-cards { height: 300px; }
-          .hero-card { width: 60%; }
-          .hero-cards:hover .hero-card:nth-child(1) { transform: translate(-30px, -10px) rotate(-10deg); }
-          .hero-cards:hover .hero-card:nth-child(2) { transform: translate(25px, 12px) rotate(7deg); }
           .hero-ip-badges { flex-wrap: wrap; gap: 6px; }
           .products-grid { grid-template-columns: 1fr; }
           .products-section { padding: 40px 20px; }
@@ -321,16 +311,10 @@ export default function Hero({ description, cta }: HeroProps) {
           </div>
           </div>{/* end hero-text */}
 
-          {/* C方案：型錄卡片堆疊 */}
+          {/* C方案：主視覺產品照 */}
           <div className="hero-cards" aria-hidden>
             <div className="hero-card">
               <img src="/images/01_HERO背景圖1920x1080px-500KB/主頁產品-情境照.jpg" alt="" />
-            </div>
-            <div className="hero-card">
-              <img src="/images/hero-2.jpg" alt="" />
-            </div>
-            <div className="hero-card">
-              <img src="/images/hero-1.jpg" alt="" />
             </div>
           </div>
 
