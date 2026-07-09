@@ -125,14 +125,25 @@ export default function StickerPage() {
             {materials.map(m => (
               <div key={m.name} style={{ background: ACCENT_L, borderRadius: 8, padding: '16px 16px 24px', border: `1px solid rgba(125,170,203,0.2)` }}>
                 {m.name === '貼紙製造機' ? (
-                  <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', marginBottom: 14, background: WHITE }}>
-                    <Image
-                      src="/images/02_產品卡片圖800x600px-200KB/貼紙製造/產品卡片圖-自有貼紙機-02.jpg"
-                      alt="貼紙製造機"
-                      fill
-                      sizes="(max-width: 767px) 100vw, 33vw"
-                      style={{ objectFit: 'cover' }}
-                    />
+                  <div style={{ display: 'grid', gap: 12, marginBottom: 14 }}>
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', background: WHITE }}>
+                      <Image
+                        src="/images/02_產品卡片圖800x600px-200KB/貼紙製造/產品卡片圖-自有貼紙機-02.jpg"
+                        alt="貼紙製造機 02"
+                        fill
+                        sizes="(max-width: 767px) 100vw, 33vw"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', background: WHITE }}>
+                      <Image
+                        src="/images/02_產品卡片圖800x600px-200KB/貼紙製造/產品卡片圖-自有貼紙機-03.jpg"
+                        alt="貼紙製造機 03"
+                        fill
+                        sizes="(max-width: 767px) 100vw, 33vw"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
                   </div>
                 ) : null}
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: G900, marginBottom: 6 }}>{m.name}</h3>
