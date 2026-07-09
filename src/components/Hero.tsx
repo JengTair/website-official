@@ -324,7 +324,7 @@ export default function Hero({ description, cta }: HeroProps) {
           {/* C方案：型錄卡片堆疊 */}
           <div className="hero-cards" aria-hidden>
             <div className="hero-card">
-              <img src="/images/hero-4.jpg" alt="" />
+              <img src="/images/01_HERO背景圖1920x1080px-500KB/主頁產品-情境照.jpg" alt="" />
             </div>
             <div className="hero-card">
               <img src="/images/hero-2.jpg" alt="" />
