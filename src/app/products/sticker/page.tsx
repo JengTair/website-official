@@ -150,9 +150,6 @@ export default function StickerPage() {
                     <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', background: WHITE }}>
                       <Image
                         src="/images/02_產品卡片圖800x600px-200KB/小新/產品卡片圖-小新3D浮雕貼-02.jpg"
-                        alt="冰雪星鑽貼 02"
-                        fill
-                        sizes="(max-width: 767px) 100vw, 33vw"
                         alt="小新3D浮雕貼 02"
                         fill
                         sizes="(max-width: 767px) 100vw, 33vw"
@@ -226,6 +223,27 @@ export default function StickerPage() {
                       <Image
                         src="/images/02_產品卡片圖800x600px-200KB/三麗鷗/產品卡片圖-三麗鷗泡棉貼-04.jpg"
                         alt="三麗鷗泡棉貼 04"
+                        fill
+                        sizes="(max-width: 767px) 100vw, 33vw"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
+                  </div>
+                ) : m.name === '紓壓貼(屁屁貼)' ? (
+                  <div style={{ display: 'grid', gap: 12, marginBottom: 14 }}>
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', background: WHITE }}>
+                      <Image
+                        src="/images/02_產品卡片圖800x600px-200KB/小新/產品卡片圖-小新屁屁貼-02.jpg"
+                        alt="小新屁屁貼 02"
+                        fill
+                        sizes="(max-width: 767px) 100vw, 33vw"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
+                    <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', background: WHITE }}>
+                      <Image
+                        src="/images/02_產品卡片圖800x600px-200KB/小新/產品卡片圖-小新屁屁貼-03.jpg"
+                        alt="小新屁屁貼 03"
                         fill
                         sizes="(max-width: 767px) 100vw, 33vw"
                         style={{ objectFit: 'cover' }}
