@@ -218,6 +218,7 @@ export default function IPLicensingPage() {
             .ip-card-btn:hover { background: ${ACCENT}; color: ${WHITE}; }
             @media (max-width: 1023px) { .ip-grid { grid-template-columns: repeat(3, 1fr); } }
             @media (max-width: 767px)  { .ip-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+            @media (max-width: 767px)  { .ip-brand-header { flex-wrap: wrap; } .ip-brand-desc { width: 100%; padding-left: 16px; font-size: 12px; } }
           `}</style>
 
           {/* 分品牌顯示 */}
@@ -225,10 +226,10 @@ export default function IPLicensingPage() {
             {productGroups.map(g => (
               <div key={g.brand} id={`brand-${g.brand}`} style={{ scrollMarginTop: 80 }}>
                 {/* 品牌分組標題 */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+                <div className="ip-brand-header" style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
                   <div style={{ width: 4, height: 22, borderRadius: 2, background: g.color }} />
                   <span style={{ fontSize: 18, fontWeight: 800, color: G900 }}>{g.brand}</span>
-                  <span style={{ fontSize: 12, color: G500, marginLeft: 4 }}>{g.desc}</span>
+                  <span className="ip-brand-desc" style={{ fontSize: 12, color: G500, marginLeft: 4 }}>{g.desc}</span>
                   <span style={{ fontSize: 11, color: g.color, background: g.color + '18', padding: '2px 10px', borderRadius: 20, fontWeight: 600, marginLeft: 'auto' }}>
                     {g.items.length} 件商品
                   </span>
