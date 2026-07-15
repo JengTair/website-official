@@ -112,7 +112,7 @@ export default function StickerPage() {
             </svg>
           </div>
         </div>
-        <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 460px', gap: 56, alignItems: 'center' }}>
+        <div className="sticker-hero-grid" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 580px', gap: 56, alignItems: 'center' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
               <div style={{ width: 24, height: 1, background: ACCENT }} />
@@ -131,7 +131,7 @@ export default function StickerPage() {
             </div>
           </div>
 
-          <div style={{ position: 'relative', width: '100%', aspectRatio: '1 / 1', minHeight: 420 }}>
+          <div className="sticker-hero-img" style={{ position: 'relative', width: '100%', aspectRatio: '1 / 1', minHeight: 560 }}>
             <div aria-hidden style={{ position: 'absolute', top: 8, right: 4, width: 90, height: 90, borderRadius: '50%', background: '#FFB58F', opacity: 0.12, filter: 'blur(2px)' }} />
             <div aria-hidden style={{ position: 'absolute', bottom: 12, left: 10, width: 76, height: 76, borderRadius: '50%', background: MINT, opacity: 0.10, filter: 'blur(2px)' }} />
             <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
@@ -139,7 +139,7 @@ export default function StickerPage() {
                 src="/images/01_HERO背景圖1920x1080px-500KB/貼紙製造-情境照03.png"
                 alt="貼紙製造情境照"
                 fill
-                sizes="(max-width: 767px) 100vw, 460px"
+                sizes="(max-width: 767px) 100vw, 580px"
                 style={{ objectFit: 'contain', objectPosition: 'center center', filter: 'drop-shadow(0 12px 24px rgba(232,219,179,0.08))' }}
               />
             </div>
@@ -147,12 +147,20 @@ export default function StickerPage() {
         </div>
       </section>
 
+      <style>{`
+        @media (max-width: 767px) {
+          .sticker-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          .sticker-hero-img { min-height: 320px !important; }
+          .sticker-product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+        }
+      `}</style>
+
       {/* 貼紙款式 */}
       <section style={{ background: 'linear-gradient(180deg, #FFF2E8 0%, #F7FFFD 100%)', padding: '60px 40px' }}>
         <div style={{ maxWidth: 1160, margin: '0 auto' }}>
           <h2 style={{ fontSize: 24, fontWeight: 800, color: G900, marginBottom: 8 }}>貼紙款式</h2>
           <p style={{ fontSize: 14, color: G500, marginBottom: 32 }}>可搭配不同主題與授權IP開發，打造兼具創意與互動性的DIY商品</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 16 }}>
+          <div className="sticker-product-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 16 }}>
             {materials.map(m => (
               <div key={m.name} style={{ background: ACCENT_L, borderRadius: 8, padding: '16px 16px 24px', border: `1px solid rgba(125,170,203,0.2)` }}>
                 {m.name === '貼紙製造機' ? (

@@ -152,7 +152,7 @@ export default function IPLicensingPage() {
           </div>
 
           {/* 右側：授權商品主圖 */}
-          <div style={{ position: 'relative', width: 500, height: 560, flexShrink: 0 }} className="ip-hero-deco">
+          <div style={{ position: 'relative', width: 620, height: 680, flexShrink: 0 }} className="ip-hero-deco">
             <div aria-hidden style={{ position: 'absolute', top: 0, right: 6, width: 110, height: 110, borderRadius: '50%', background: '#F5A623', opacity: 0.05, filter: 'blur(2px)' }} />
             <div aria-hidden style={{ position: 'absolute', bottom: 26, left: 14, width: 88, height: 88, borderRadius: '50%', background: ACCENT, opacity: 0.05, filter: 'blur(2px)' }} />
             <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', background: 'transparent' }}>

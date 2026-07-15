@@ -47,7 +47,7 @@ export default function ContactPage() {
 
       {/* Contact Info + Form */}
       <section style={{ padding: '64px 40px', borderBottom: `1px solid ${SAND}` }}>
-        <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'start' }}>
+        <div className="contact-main-grid" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'start' }}>
           <div>
             <h2 style={{ fontSize: 24, fontWeight: 900, color: G900, letterSpacing: '-0.5px', marginBottom: 32 }}>聯絡資訊</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -92,7 +92,7 @@ export default function ContactPage() {
           <div>
             <h2 style={{ fontSize: 24, fontWeight: 900, color: G900, letterSpacing: '-0.5px', marginBottom: 32 }}>傳送訊息</h2>
             <form style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+              <div className="contact-name-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
                 <div>
                   <label style={{ fontSize: 13, fontWeight: 600, color: G900, display: 'block', marginBottom: 6 }}>姓名</label>
                   <input type="text" placeholder="您的姓名" style={{ width: '100%', padding: '10px 14px', border: `1px solid ${SAND}`, borderRadius: 8, fontSize: 14, color: G900, background: WHITE, outline: 'none', boxSizing: 'border-box' }} />
@@ -172,6 +172,12 @@ export default function ContactPage() {
         navigation={homepageData.navigation}
         year={new Date().getFullYear()}
       />
+      <style>{`
+        @media (max-width: 767px) {
+          .contact-main-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+          .contact-name-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </div>
   );
 }
