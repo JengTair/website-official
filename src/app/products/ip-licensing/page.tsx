@@ -131,7 +131,7 @@ export default function IPLicensingPage() {
           @keyframes ip-float2 { 0%,100%{ transform: translateY(0) rotate(0deg); } 50%{ transform: translateY(-8px) rotate(-6deg); } }
         `}</style>
 
-        <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 28, alignItems: 'center' }}>
+        <div className="ip-hero-grid" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 28, alignItems: 'center' }}>
           {/* 左側文字 */}
           <div style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
@@ -165,6 +165,10 @@ export default function IPLicensingPage() {
 
       <style>{`
         @media (min-width: 768px) { .ip-hero-deco { display: block !important; } }
+        @media (max-width: 767px) {
+          .ip-hero-grid { grid-template-columns: 1fr !important; }
+          .ip-hero-deco { width: 100% !important; height: 300px !important; position: relative !important; }
+        }
       `}</style>
 
       {/* 授權品牌 + 產品目錄（合併） */}
