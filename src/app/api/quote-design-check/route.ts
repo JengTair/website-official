@@ -1,7 +1,11 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { NextRequest, NextResponse } from 'next/server';
 
-const client = new Anthropic();
+function createClient() {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) return null;
+  return new Anthropic({ apiKey });
+}
 
 const SUPPORTED_IMAGE_TYPES: Record<string, 'image/jpeg' | 'image/png' | 'image/gif' | 'image/webp'> = {
   jpg: 'image/jpeg',
@@ -10,6 +14,11 @@ const SUPPORTED_IMAGE_TYPES: Record<string, 'image/jpeg' | 'image/png' | 'image/
 };
 
 export async function POST(req: NextRequest) {
+  const client = createClient();
+  if (!client) {
+    return NextResponse.json({ error: 'anthropic_not_configured' }, { status: 503 });
+  }
+
   const formData = await req.formData();
   const file = formData.get('file') as File | null;
 

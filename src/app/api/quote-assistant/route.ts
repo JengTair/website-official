@@ -1,9 +1,18 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { NextRequest, NextResponse } from 'next/server';
 
-const client = new Anthropic();
+function createClient() {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) return null;
+  return new Anthropic({ apiKey });
+}
 
 export async function POST(req: NextRequest) {
+  const client = createClient();
+  if (!client) {
+    return NextResponse.json({ error: 'anthropic_not_configured' }, { status: 503 });
+  }
+
   const { userInput } = await req.json() as { userInput: string };
 
   if (!userInput || !userInput.trim()) {

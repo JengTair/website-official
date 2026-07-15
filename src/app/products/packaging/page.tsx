@@ -381,13 +381,13 @@ export default function PackagingPage() {
           <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', marginBottom: 36 }}>從詢價到出貨，7 個步驟清楚透明</p>
           <div className="process-flow">
             {processSteps.map((s, i) => (
-              <>
+              <div key={s.num} style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
                 <div className="process-step" key={s.num}>
                   <div style={{ width: 48, height: 48, borderRadius: '50%', background: BLUE, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 18, color: WHITE, marginBottom: 8 }}>{s.num}</div>
                   <span style={{ fontSize: 13, fontWeight: 600, color: WHITE, whiteSpace: 'nowrap' }}>{s.label}</span>
                 </div>
-                {i < processSteps.length - 1 && <div className="process-arrow" key={`arrow-${i}`}>→</div>}
-              </>
+                {i < processSteps.length - 1 && <div className="process-arrow">→</div>}
+              </div>
             ))}
           </div>
         </div>
