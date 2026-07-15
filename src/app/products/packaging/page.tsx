@@ -223,6 +223,7 @@ export default function PackagingPage() {
           .pkg-grid-2 { grid-template-columns: 1fr; }
           .pkg-grid-apps { grid-template-columns: repeat(3, 1fr); }
           .pkg-grid-specs { grid-template-columns: 1fr; }
+          .pkg-logic-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
         }
         .pkg-section { padding: 64px 40px; }
         @media (max-width: 767px) { .pkg-section { padding: 48px 20px; } }
@@ -303,7 +304,7 @@ export default function PackagingPage() {
 
       {/* 材質選擇邏輯 + 上光膜 */}
       <section className="pkg-section" style={{ background: SAND }}>
-        <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48 }}>
+        <div className="pkg-logic-grid" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48 }}>
           <div>
             <h2 style={{ fontSize: 22, fontWeight: 800, color: G900, marginBottom: 8 }}>材質選擇邏輯</h2>
             <p style={{ fontSize: 13, color: G500, marginBottom: 24 }}>依您的需求快速找到適合材質</p>
